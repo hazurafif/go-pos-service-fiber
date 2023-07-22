@@ -1,0 +1,15 @@
+package models
+
+type Orders struct {
+	Id            int     `gorm:"primaryKey" json:"id"`
+	UserID        int     `json:"user"`
+	Users         Users   `gorm:"foreignKey:UserID" json:"users"`
+	PaymentTypeID int     `json:"payment_type_id"`
+	Payment       Payment `gorm:"foreignKey:PaymentTypeID" json:"payment"`
+	Name          string  `gorm:"type:varchar(300)" json:"name"`
+	TotalPrice    int     `json:"total_price"`
+	TotalPaid     int     `json:"total_paid"`
+	ReceiptID     int     `json:"receipt_id"`
+	CreatedAt     string  `gorm:"type:varchar(25)" json:"created_at"`
+	UpdatedAt     string  `gorm:"type:varchar(25)" json:"updated_at"`
+}

@@ -1,30 +1,27 @@
-package main
+package controllers
 
-import (
-	"net/http"
+import "github.com/gofiber/fiber/v2"
 
-	"golang/models"
-	"gorm.io/gorm"
-
-	"github.com/gofiber/fiber/v2"
-)
-
-func Index(c *fiber.Ctx) error {
+func loginHandler(c *fiber.Ctx) error {
 	return nil
 }
 
-func Show(c *fiber.Ctx) error {
+func createUserHandler(c *fiber.Ctx) error {
 	return nil
 }
 
-func Create(c *fiber.Ctx) error {
+func deleteUserHandler(c *fiber.Ctx) error {
 	return nil
 }
 
-func Update(c *fiber.Ctx) error {
+func updateUserHandler(c *fiber.Ctx) error {
 	return nil
 }
 
-func Delete(c *fiber.Ctx) error {
+func getAllUsersHandler(c *fiber.Ctx) error {
+	return nil
+}
+
+func getUserByIDHandler(c *fiber.Ctx) error {
 	return nil
 }

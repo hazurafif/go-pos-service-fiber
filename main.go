@@ -1,7 +1,8 @@
 package main
 
 import (
-	"golang/models"
+	""
+	"models"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -11,15 +12,20 @@ func main() {
 
 	app := fiber.New()
 
-	users := app.Group("/users")
-	product := app.Group("/product")
-	categories := app.Group("/categories")
-	payment := app.Group("/payment")
-	order := app.Group("/order")
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Hello, World!")
+	})
 
-	users.Get("/", userscontroller.Index)
-	users.Get(":id", userscontroller.Show)
-	users.Post("/", userscontroller.Create)
-	users.Put("/:id", userscontroller.Update)
-	users.Delete(":id", userscontroller.Delete)
+	err := app.Listen(":3000")
+	if err != nil {
+		panic(err)
+	}
+
+	users := app.Group("users")
+	users.Post("/login", userscontroller.loginHandler)
+	users.Post("")
+	users.Delete("/:id")
+	users.Put("/:id")
+	users.Get("")
+	users.Get("/:id")
 }

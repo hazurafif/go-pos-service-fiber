@@ -8,6 +8,6 @@ type Order_product struct {
 	Products    Products `gorm:"foreignKey:ProductId" json:"products"`
 	Qty         int      `json:"qty"`
 	Total_price int      `json:"total_price"`
-	CreatedAt   string   `gorm:"type:varchar(25)" json:"created_at"`
-	UpdatedAt   string   `gorm:"type:varchar(25)" json:"updated_at"`
+	CreatedAt   string   `gorm:"type:DATETIME" json:"created_at"`
+	UpdatedAt   string   `gorm:"type:DATETIME" json:"updated_at"`
 }

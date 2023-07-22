@@ -2,26 +2,26 @@ package controllers
 
 import "github.com/gofiber/fiber/v2"
 
-func loginHandler(c *fiber.Ctx) error {
+func Login(c *fiber.Ctx) error {
 	return nil
 }
 
-func createUserHandler(c *fiber.Ctx) error {
+func CreateUser(c *fiber.Ctx) error {
 	return nil
 }
 
-func deleteUserHandler(c *fiber.Ctx) error {
+func DeleteUser(c *fiber.Ctx) error {
 	return nil
 }
 
-func updateUserHandler(c *fiber.Ctx) error {
+func UpdateUser(c *fiber.Ctx) error {
 	return nil
 }
 
-func getAllUsersHandler(c *fiber.Ctx) error {
+func GetAllUsers(c *fiber.Ctx) error {
 	return nil
 }
 
-func getUserByIDHandler(c *fiber.Ctx) error {
+func GetUserByID(c *fiber.Ctx) error {
 	return nil
 }

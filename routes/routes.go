@@ -1,6 +1,10 @@
 package routes
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"go-pos-service-fiber/controllers"
+
+	"github.com/gofiber/fiber/v2"
+)
 
 func routes() {
 	app := fiber.New()
@@ -10,12 +14,12 @@ func routes() {
 	})
 
 	users := app.Group("users")
-	users.Post("/login")
-	users.Post("")
-	users.Delete("/:id")
-	users.Put("/:id")
-	users.Get("")
-	users.Get("/:id")
+	users.Post("/login", controllers.Login)
+	users.Post("", controllers.CreateUser)
+	users.Delete("/:id", controllers.DeleteUser)
+	users.Put("/:id", controllers.UpdateUser)
+	users.Get("", controllers.GetAllUsers)
+	users.Get("/:id", controllers.GetUserByID)
 
 	product := app.Group("product")
 	product.Post("")

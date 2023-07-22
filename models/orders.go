@@ -10,6 +10,6 @@ type Orders struct {
 	TotalPrice    int     `json:"total_price"`
 	TotalPaid     int     `json:"total_paid"`
 	ReceiptID     int     `json:"receipt_id"`
-	CreatedAt     string  `gorm:"type:varchar(25)" json:"created_at"`
-	UpdatedAt     string  `gorm:"type:varchar(25)" json:"updated_at"`
+	CreatedAt     string  `gorm:"type:DATETIME" json:"created_at"`
+	UpdatedAt     string  `gorm:"type:DATETIME" json:"updated_at"`
 }

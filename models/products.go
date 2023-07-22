@@ -9,6 +9,6 @@ type Products struct {
 	Image       string     `json:"image"`
 	Category_id int        `json:"category_id"`
 	Categories  Categories `gorm:"foreignKey:Category_id" json:"categories"`
-	CreatedAt   string     `gorm:"type:varchar(25)" json:"created_at"`
-	UpdatedAt   string     `gorm:"type:varchar(25)" json:"updated_at"`
+	CreatedAt   string     `gorm:"type:DATETIME" json:"created_at"`
+	UpdatedAt   string     `gorm:"type:DATETIME" json:"updated_at"`
 }

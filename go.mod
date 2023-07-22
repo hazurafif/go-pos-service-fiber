@@ -1,4 +1,4 @@
-module golang
+module go-pos-service-fiber
 
 go 1.20
 

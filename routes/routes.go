@@ -9,11 +9,6 @@ func routes() {
 		return c.SendString("Hello, World!")
 	})
 
-	err := app.Listen(":3000")
-	if err != nil {
-		panic(err)
-	}
-
 	users := app.Group("users")
 	users.Post("/login")
 	users.Post("")
